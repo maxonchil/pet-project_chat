@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '12'
+install: npm install
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  app: b3chat
+  api_key:
+    secure: nAQW7je0oy+C2E4TuzqNGx8zgQX+1mhiS+ac4UOX9fiIi1WqviWoAz+9IJhKseY+gweYTCu71s0xsJRn1kwj9WHDum7oEsiA0iss+0Z+ceCrAevjS3j3cJI4jttInNzjfbe7NW9duJQhzCndZyKk0BvUIwIjtqBa1yFGSUTfWLRA3IlpfJs4xPKNcS4x56HbfffAWQxC0EnLOjL3yPPIH9098L2NITEYaZ4HN+7yrLivAy34q9dol/nlrFjN6bQQwgxTpLeul6jJs5ljoJ0tqAEb+x9oqURP8tTa4SWBLoLuYstObJlXTqpBXfcIFoN+bh9+6ZDA2DQYwyEPXDOKu8iw2ILd9j8SbnzpmMvYu2+mP1XgQYLga0uaVukVbpzVYesmLkF7Lbrw/wQ/aYiR/xLX6St92lSipC+Rz42u6CrmmT02PEFGOiSxPL7RZHB9ITICqDrtlBe6LQePRW4ky/csmJd+lNUWn2Y63c3sUFPSUxxMNixhLgYMAEkpN3yYy2mhifbsBuDHnU3IgdYDjmx0wrH3zPtwaKxj6+IG3I40bygpvq5xggVSyuDwBPZ1kChkeNX18C7iA61poDO7Nh5SvQb/31aHDBh5xPPUXUAvya8XyuZXsCS7ghVg5ju8ZpeOXKvT99OzKGtioehuIodNVgS3ha4pXKYOsYwCAxs=

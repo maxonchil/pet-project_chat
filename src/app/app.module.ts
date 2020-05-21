@@ -7,6 +7,7 @@ import {ChatChooseComponent} from './chat-choose/chat-choose.component';
 import {ChatComponent} from './chat/chat.component';
 import {HttpClientModule} from '@angular/common/http';
 import { IntroduceComponent } from './introduce/introduce.component';
+import { RoomsComponent } from './rooms/rooms.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { IntroduceComponent } from './introduce/introduce.component';
     ChatChooseComponent,
     ChatComponent,
     IntroduceComponent,
+    RoomsComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class SocketService {
   public socket: any;
+  public chatRoomName: string;
   readonly url = 'ws://localhost:3000';
 
 
@@ -24,8 +25,15 @@ export class SocketService {
     });
   }
 
-  emit(eventName: string, data: string) {
-    this.socket.emit(eventName, data);
+  emit(eventName: string, data1: string, data2: string) {
+    this.socket.emit(eventName, data1, data2);
   }
 
+  getRooms(): Observable<any> {
+    return this.http.get<any>('http://localhost:3000/rooms');
+  }
+
+  public createRoom(name: string): void {
+    this.http.post('http://localhost:3000/rooms', {name}).subscribe();
+  }
 }

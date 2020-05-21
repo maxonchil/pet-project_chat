@@ -2,13 +2,15 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {ChatComponent} from './chat/chat.component';
 import {IntroduceComponent} from './introduce/introduce.component';
+import {RoomsComponent} from './rooms/rooms.component';
 
 
 const routes: Routes = [{
-  path: '', component: IntroduceComponent,
+  path: '', component: RoomsComponent,
 },
+  {path: 'login', component: IntroduceComponent},
   {
-    path: 'chat', component: ChatComponent
+    path: 'chat/:room', component: ChatComponent
   }];
 
 @NgModule({

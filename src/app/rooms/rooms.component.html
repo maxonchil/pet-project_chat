@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let room of rooms">
+    <p> {{room.name}}</p>
+    <a (click)="goToChat($event, room.name)" href="/chat/{{room.name}}">join</a>
+  </li>
+</ul>
+<input placeholder="Enter room name" #room type="text">
+<button (click)="createRoom()">Create room</button>

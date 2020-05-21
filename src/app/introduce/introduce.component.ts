@@ -9,16 +9,19 @@ import {Router} from '@angular/router';
 })
 export class IntroduceComponent implements OnInit {
   @ViewChild('name') userName: ElementRef;
+  public chatRoom;
 
   constructor(private socketService: SocketService, private router: Router) {
+    this.chatRoom = this.socketService.chatRoomName;
   }
 
   ngOnInit(): void {
   }
 
   connectToChat(): void {
-    this.socketService.emit('new-user', this.userName.nativeElement.value);
-    this.router.navigate(['chat']);
+
+    this.socketService.emit('new-user', this.userName.nativeElement.value, this.chatRoom);
+    this.router.navigate([`chat/${this.chatRoom}`]);
   }
 
 }

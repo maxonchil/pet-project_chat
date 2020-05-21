@@ -1,0 +1,49 @@
+.chat {
+
+  &__message {
+    display: block;
+    width: 500px;
+    height: 100px;
+    margin: 30px auto;
+    resize: none;
+  }
+
+  &__controller {
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  &__submit {
+    align-self: center;
+    margin: 10px;
+  }
+}
+
+.chat-window {
+  width: 700px;
+  height: 300px;
+  margin: 0 auto;
+  border: 2px solid #000;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__message-item {
+    margin: 10px;
+    border-bottom: 1px solid #000;
+  }
+
+  &__name {
+    font-weight: 700;
+    color: #333;
+  }
+
+  &__message {
+    color: #000;
+  }
+}

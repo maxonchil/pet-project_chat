@@ -13,13 +13,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.socketService.listen('test-event').subscribe((data) => console.log(data));
   }
 
-  test(): void {
-    this.socketService.emit('new-message', 'New message is coming');
-  }
-  sendMessage():void {
 
-  }
+
 }

@@ -30,10 +30,10 @@ export class SocketService {
   }
 
   getRooms(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/rooms');
+    return this.http.get<any>('https://b3chat.herokuapp.com/rooms');
   }
 
   public createRoom(name: string): void {
-    this.http.post('http://localhost:3000/rooms', {name}).subscribe();
+    this.http.post('https://b3chat.herokuapp.com/rooms', {name}).subscribe();
   }
 }

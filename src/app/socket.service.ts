@@ -10,7 +10,7 @@ import {HttpClient} from '@angular/common/http';
 export class SocketService {
   public socket: any;
   public chatRoomName: string;
-  readonly url = 'ws://b3chat.herokuapp.com/';
+  readonly url = 'https://b3chat.herokuapp.com/rooms';
 
 
   constructor(private http: HttpClient) {
